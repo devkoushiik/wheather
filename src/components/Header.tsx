@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTheme } from "./context/theme-provider";
 import { ThemeToggle } from "./ThemeToggle";
+import { CitySearch } from "./CitySearch";
 
 export default function Header() {
   const { theme } = useTheme();
@@ -12,12 +13,12 @@ export default function Header() {
           <img
             src={theme === "dark" ? "/logo.png" : "/logo2.png"}
             alt="Klimate logo"
-            className="h-14"
+            className="h-10"
           />
         </Link>
 
         <div className="flex gap-4">
-          {/* citysearch */}
+          <CitySearch />
           <ThemeToggle />
         </div>
       </div>
